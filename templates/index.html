@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
   <head>
     <meta
       name="description"
-      content="CBE Thermal Comfort tool to calculate thermal comfort according to ASHRAE Standard 55-2020, thermal comfort, PMV, PPD, SET, Adaptive comfort, Center for the Built Environment, CBE, UC Berkeley, Predicted Mean Vote, Predicted Percentage of Dissatisfied, Standard Equivalent Temperature, Ole Fanger, Richard de Dear, Gail Brager, Draft, Draught, Air Movement, Metabolic activity, Clothing Insulation, MET, CLO"
+      content="CBE 温熱快適度ツール(日本語版) to calculate thermal comfort according to ASHRAE Standard 55-2020, thermal comfort, PMV, PPD, SET, Adaptive comfort, Center for the Built Environment, CBE, UC Berkeley, Predicted Mean Vote, Predicted Percentage of Dissatisfied, Standard Equivalent Temperature, Ole Fanger, Richard de Dear, Gail Brager, Draft, Draught, Air Movement, Metabolic activity, Clothing Insulation, MET, CLO"
     />
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="static/img/favico.png" />
@@ -13,33 +13,25 @@
     <meta property="og:title" content="CBE Thermal Comfort Tool" />
     <meta
       property="og:description"
-      content="CBE Thermal Comfort Tool to calculate thermal comfort indexes (e.g. PMV, PPD, SET, Adaptive) in compliance with AHSRAE and EN Standards"
+      content="CBE 温熱快適度ツール (日本語版) to calculate thermal comfort indexes (e.g. PMV, PPD, SET, Adaptive) in compliance with AHSRAE and EN Standards"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://comfort.cbe.berkeley.edu" />
+    <meta property="og:url" content="https://comfort.archlab.jp" />
     <meta
       property="og:image"
       content="https://comfort.cbe.berkeley.edu/static/img/og_ashrae.png"
     />
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-146504560-1"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDLQNMPQXD"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag("js", new Date());
-
-      gtag("config", "UA-30562462-2");
+      gtag('config', 'G-DDLQNMPQXD');
     </script>
 
-    {% block head %}
+{% block head %}
     <script src="static/js/lib/fontawesome.min.js"></script>
     <link
       rel="stylesheet"
@@ -92,20 +84,14 @@
           <div class="d-flex flex-column w-100">
             <div class="p-2">
               <h4 class="m-0" style="color: #0f75bb; display: inline-block">
-                CBE Thermal Comfort Tool
+                CBE 温熱快適度ツール (日本語版)
               </h4>
               <div style="display: inline-block; float: right">
                 <a
                   href="https://center-for-the-built-environment.gitbook.io/thermal-comfort-tool/help/help"
                   target="_blank"
                   class="m-2"
-                  >Help</a
-                >
-                <a
-                  href="https://cbe.berkeley.edu/resources/tools/"
-                  target="_blank"
-                  class="m-2"
-                  >Other CBE tools</a
+                  >ヘルプ</a
                 >
               </div>
             </div>
@@ -141,7 +127,7 @@
         >
           <div class="col-md-8 col-lg-6">
             <p>
-              <strong>Please cite us if you use this software: </strong>
+              <strong>このソフトウェアを使用する場合は、引用してください。: </strong>
               <a
                 href="https://www.sciencedirect.com/science/article/pii/S2352711020302454?via%3Dihub"
                 style="color: white"
@@ -160,7 +146,7 @@
             </p>
           </div>
           <div class="col-md-4 col-lg-3 mb-3 text-center">
-            <p class="mb-4">
+            <p class="mb-4 invisible">
               <a
                 href="https://center-for-the-built-environment.gitbook.io/thermal-comfort-tool/help/help"
                 ><strong>Contact us</strong></a
@@ -169,7 +155,7 @@
             <div class="row footer justify-content-center">
               <div class="col center">
                 <a
-                  href="https://github.com/CenterForTheBuiltEnvironment/comfort_tool"
+                  href="https://github.com/youworks/comfort_tool_ja"
                 >
                   <img
                     alt="source code repository"
@@ -178,18 +164,6 @@
                   /> </a
                 ><br />
                 Code
-              </div>
-              <div class="col center">
-                <a
-                  href="https://github.com/CenterForTheBuiltEnvironment/comfort_tool/issues"
-                >
-                  <img
-                    alt="submit an issue"
-                    src="/static/img/logo-github.svg"
-                    width="30"
-                  /> </a
-                ><br />
-                Issues
               </div>
               <div class="col">
                 <a href="https://youtu.be/v3NcabOAGKk?t=62">

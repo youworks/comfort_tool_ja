@@ -9,10 +9,10 @@
 <div class="container my-4 px-0">
   {# explanation of what the page does #}
   <div class="jumbotron">
-    <h1>Calculate comfort indexes!</h1>
+    <h1>快適性指標を算出</h1>
     <p class="lead">
-      With this application you can upload a large set of comfort parameters and
-      this tool will automatically calculate the thermal comfort indexes.
+      このアプリケーションを使用すると、快適性パラメータの大規模なセットをアップロードすることができます。
+      このツールは自動的に熱的快適性指数を計算します。
       <a
         href="https://center-for-the-built-environment.gitbook.io/thermal-comfort-tool/documentation/upload"
         target="_new"
@@ -20,43 +20,35 @@
       ></a>
     </p>
     <hr class="my-4" />
-    <h2>Instructions</h2>
+    <h2>使い方</h2>
     <div>
       <p>
-        <strong>Step 1 - </strong> Please download either the SI or IP unit
-        template using the following links:
+        <strong>Step 1 - </strong> 次のリンクからテンプレートをダウンロードしてください。
         <a href="download/template-SI.csv"
-          ><em class="fas fa-file-download"></em> SI-unit template</a
-        >,
-        <a href="download/template-IP.csv"
-          ><em class="fas fa-file-download"></em> IP-unit template</a
+          ><em class="fas fa-file-download"></em> SI単位系テンプレート</a
         >.
       </p>
     </div>
     <div>
-      <p><strong>Step 2 - </strong> Open the downloaded .csv file.</p>
+      <p><strong>Step 2 - </strong> ダウンロードしたCSVファイルを開いて下さい。</p>
       <p class="ml-4">
-        Each column represents an unique input parameter. It's important that
-        the name of each column remains unchanged. For your reference each
-        template contains some example data, please replace them with your data.
-        If you do not have data for a certain parameter, simply fill all the
-        rows with a representative constant value. For example, if you conducted
-        the study in a office and did not log the metabolic rate, you may enter
-        a constant value of 1.2 in the "Metabolic rate [met]" column. Every row
-        must contain a value for each parameter.
+        各列は一意の入力パラメータを表します。各カラムの名前は変更しないことが重要です。
+        参考までに、各テンプレートにはいくつかのサンプルデータが含まれていますので、
+        それらをあなたのデータに置き換えてください。もし、あるパラメータのデータがない場合は、
+        単純に代表的な定数値ですべての行を埋めてください。例えば、オフィスで研究を行い、
+        代謝率を記録しなかった場合、「Metabolic rate[met]」の列に1.2という定数値を
+        入力することができます。すべての行に各パラメータの値を入力する必要があります。
       </p>
       <p class="ml-4 font-italic">
-        Please enter the average air speed and the clothing insulation as
-        inputs. The tool automatically calculates the relative air speed and the
-        dynamic clothing insulation for moving occupants for you. These values
-        will be appended as new columns in the result file.
+        平均風速と衣服の保温性を入力として入力してください。本ツールは、
+        移動する居住者の相対風速と動的衣服保温を自動的に計算します。
+        これらの値は、結果ファイルの新しいカラムとして追加されます。
       </p>
     </div>
     <div>
       <p>
-        <strong>Step 3 - </strong> Select the file to upload by clicking on the
-        "Choose File" button below. Then press the "Upload File" button. The
-        algorithm will automatically calculated the following indexes:
+        <strong>Step 3 - </strong> 下の「ファイルを選択」ボタンをクリックして、アップロードするファイルを選択してください。
+        その後、"Upload File "ボタンを押してください。アルゴリズムは、以下のインデックスを自動的に計算します。
       </p>
     </div>
     <div>
@@ -86,13 +78,12 @@
     </div>
     <div>
       <p>
-        <strong>Step 4 - </strong> A file named "results.csv" will be
-        automatically downloaded by your browser which contains all the results.
-        The results are calculated using the
+        <strong>Step 4 - </strong>すべての結果を含む "export.csv "というファイルがブラウザから自動的にダウンロードされます。
+        結果は
         <a href="https://pypi.org/project/pythermalcomfort/">
           pythermalcomfort
         </a>
-        Python package.
+        Pythonパッケージを使用して計算されています。
       </p>
     </div>
 

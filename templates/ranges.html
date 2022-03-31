@@ -1,5 +1,5 @@
 {% extends 'index.html' %} {% block head %} {{ super() }}
-<title>CBE Thermal Comfort Tool for ASHRAE-55</title>
+<title>CBE 温熱快適度ツール for ASHRAE-55</title>
 <link rel="stylesheet" type="text/css" href="static/css/common.css" />
 <link rel="stylesheet" type="text/css" href="static/css/ui.multiselect.css" />
 <link rel="stylesheet" type="text/css" href="static/css/psychchart.css" />
@@ -36,7 +36,7 @@
   <div class="row justify-content-center">
     <div class="card col-md-12 col-lg-5 my-2 p-0">
       <div class="card-header">
-        Choose which input parameter you would like to vary:
+        どの入力パラメータを変化させたいかを選択します。
       </div>
 
       <div id="left_content">
@@ -47,11 +47,11 @@
                 <form>
                   <div class="col-sm-12">
                     <select class="form-control" id="parameter_select">
-                      <option value="sel_air_vel">Air speed</option>
+                      <option value="sel_air_vel">風速</option>
                       <option value="sel_clo" selected="selected"
-                        >Clothing level</option
+                        >着衣量</option
                       >
-                      <option value="sel_met">Metabolic rate</option>
+                      <option value="sel_met">METs</option>
                     </select>
                   </div>
                 </form>
@@ -153,7 +153,7 @@
           <table class="table table-sm table-borderless col-sm-10">
             <tbody>
               <tr id="mrt_val_row">
-                <td scope="row">Mean radiant temperature</td>
+                <td scope="row">MRT</td>
                 <td class="inputcell" id="tr-inputcell">
                   <input class="inputbox" id="tr" />
                   <span class="tempunit"> &deg;C</span>
@@ -164,21 +164,21 @@
                 data-toggle="tooltip"
                 title="This is the average air speed. The tool automatically calculates the relative air speed."
               >
-                <td scope="row">Air speed</td>
+                <td scope="row">風速</td>
                 <td class="inputcell" id="vel-inputcell">
                   <input class="inputbox" id="vel" />
                   <span class="vel-unit"> m/s</span>
                 </td>
               </tr>
               <tr id="clo_val_row">
-                <td scope="row">Clothing level</td>
+                <td scope="row">着衣量</td>
                 <td class="inputcell" id="clo-inputcell">
                   <input class="inputbox" id="clo" />
                   <span class="unit"> clo</span>
                 </td>
               </tr>
               <tr id="met_val_row">
-                <td scope="row">Metabolic rate</td>
+                <td scope="row">METs</td>
                 <td class="inputcell" id="met-inputcell">
                   <input class="inputbox" id="met" />
                   <span class="unit"> met</span>
@@ -189,7 +189,7 @@
                 <td id="humidity-spec-cont">
                   <form class="form-row align-items-center">
                     <select class="form-control" id="humidity-spec">
-                      <option value="rh">Relative humidity</option>
+                      <option value="rh">相対湿度</option>
                       <option value="w">Humidity ratio</option>
                       <option value="dewpoint">Dew point</option>
                       <option value="wetbulb">Wet bulb</option>
@@ -216,7 +216,7 @@
                 id="restart"
                 autocomplete="off"
               />
-              Reset
+              リセット
             </label>
             <label class="btn btn-light border">
               <input
@@ -227,7 +227,7 @@
               />
               Set pressure
             </label>
-            <label class="btn btn-light border">
+            <label class="btn btn-light border d-none">
               <input
                 type="radio"
                 name="options"
@@ -245,7 +245,7 @@
               <a
                 href="https://center-for-the-built-environment.gitbook.io/thermal-comfort-tool/documentation/ranges"
                 target="_new"
-                >Documentation</a
+                >ドキュメント</a
               >
             </label>
           </div>
@@ -288,30 +288,27 @@
         >
           <div class="card-body p-1 m-1">
             <p>
-              <strong> Outer range of air temperatures:</strong>
+              <strong> 広い温度範囲:</strong>
               <span id="outer-range-width" style="font-weight: bold;"></span
               ><strong><span class="tempunit"> &deg;C</span></strong>
               <br />
-              Given the other four parameters, occupants will find thermal
-              comfort in the wider range of temperatures (<span
+              他の4つのパラメータを考慮すると、<span class="factor-name"></span>
+              が指定範囲に収まるのであれば、
+              居住者は広い温度範囲 (<span
                 id="range-output1"
               ></span>
-              to <span id="range-output2"></span>
-              <span class="tempunit"> &deg;c</span>) if
-              <span class="factor-name"></span> can change within the given
-              range.
+              から <span id="range-output2"></span>
+              <span class="tempunit"> &deg;c</span>) で快適にすごすことができるでしょう。
             </p>
 
             <p>
-              <strong> Inner range of air temperatures:</strong>
+              <strong> 狭い温度範囲:</strong>
               <span id="inner-range-width" style="font-weight: bold;"></span
               ><strong><span class="tempunit"> &deg;C</span></strong>
               <br />
-              Given the other four parameters, this is the range of temperatures
-              in which all the occupants will find thermal comfort, as long as
-              the <span class="factor-name"></span> is within the given range.
-              The inner range is zero if the comfort zones corresponding to the
-              first and last conditions do not intersect.
+              他の4つのパラメータを考慮すると、<span class="factor-name"></span>が
+              指定範囲に収まるのであれば、すべての居住者が快適に過ごすことができるでしょう。
+              最初の条件と最後の条件に対応する快適ゾーンが交差しない場合、内側の範囲はゼロになります。
             </p>
           </div>
         </div>

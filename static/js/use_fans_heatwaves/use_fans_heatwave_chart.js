@@ -208,14 +208,14 @@ let use_fans_heatwave_chart = new (function () {
 
     if (isCelsius) {
       chartInstance.options.scales.yAxes[0].scaleLabel.labelString =
-        "Operative Temperature [°C]";
+        "作用温度 [°C]";
 
       upper_chart_limit = 50;
       lower_chart_limit = 30;
       leftYStep = 2;
     } else {
       chartInstance.options.scales.yAxes[0].scaleLabel.labelString =
-        "Operative Temperature [°F]";
+        "作用温度 [°F]";
 
       upper_chart_limit = 120;
       lower_chart_limit = 84;
@@ -254,7 +254,7 @@ let use_fans_heatwave_chart = new (function () {
         labels: rh_heat_strain,
         datasets: [
           {
-            label: "No heat strain",
+            label: "熱歪みがない",
             data: t_a_heat_strain,
             backgroundColor: "#def7e4ff",
             borderColor: "rgba(59,189,237,0)",
@@ -263,7 +263,7 @@ let use_fans_heatwave_chart = new (function () {
             fill: "origin",
           },
           {
-            label: "Heat strain - fan still beneficial",
+            label: "熱歪み - 扇風機はまだ有効",
             data: t_a_no_fans,
             backgroundColor: "#a0e5b1ff",
             borderColor: "rgba(53,119,158,0)",
@@ -272,7 +272,7 @@ let use_fans_heatwave_chart = new (function () {
             fill: 0,
           },
           {
-            label: "Heat strain - fan not beneficial",
+            label: "熱歪み - 扇風機は有効ではない",
             data: fans_not_beneficial,
             backgroundColor: "#ffc5b0ff",
             borderColor: "rgba(94,94,94,0)",
@@ -297,14 +297,14 @@ let use_fans_heatwave_chart = new (function () {
               }
               chartInstance.tooltip._model.opacity = 0;
               chartInstance.options.title.text =
-                "Relative Humidity = " +
+                "相対湿度 = " +
                 (
                   ((this._eventPosition.x - chartInstance.chartArea.left) /
                     (chartInstance.chartArea.right -
                       chartInstance.chartArea.left)) *
                   100
                 ).toFixed(1) +
-                " %; Operative Temperature = " +
+                " %; 作用温度 = " +
                 (
                   ((this._eventPosition.y - chartInstance.chartArea.top) /
                     (chartInstance.chartArea.bottom -
@@ -331,7 +331,7 @@ let use_fans_heatwave_chart = new (function () {
               position: "left",
               scaleLabel: {
                 display: true,
-                labelString: "Air temperature [°C]",
+                labelString: "気温 [°C]",
               },
               // stacked: true,
               gridLines: {
@@ -349,7 +349,7 @@ let use_fans_heatwave_chart = new (function () {
             {
               scaleLabel: {
                 display: true,
-                labelString: "Relative Humidity [%]",
+                labelString: "相対湿度 [%]",
               },
               gridLines: {
                 color: "rgba(0, 0, 0, 0)",

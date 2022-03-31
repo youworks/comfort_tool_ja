@@ -1,5 +1,5 @@
 {% extends "index.html" %} {% block head %} {{ super() }}
-<title>CBE Thermal Comfort Tool for ASHRAE-55</title>
+<title>CBE 温熱快適度ツール for ASHRAE-55</title>
 <link rel="stylesheet" type="text/css" href="static/css/common.css" />
 <link rel="stylesheet" type="text/css" href="static/css/ui.multiselect.css" />
 <link rel="stylesheet" type="text/css" href="static/css/psychchart.css" />
@@ -40,7 +40,7 @@
   <div class="row justify-content-center">
     <div class="card col-md-12 col-lg-5 my-2 p-0">
       <div class="card-header">
-        Inputs
+        入力
       </div>
       <div id="left_content" class="card-body">
         {# Select method PMV or adaptive #}
@@ -52,7 +52,7 @@
                   class="mainlink"
                   href="http://en.wikipedia.org/wiki/Thermal_comfort#Thermal_comfort_models"
                   target="_new"
-                  >Select method:</a
+                  >手法選択:</a
                 >
               </div>
             </div>
@@ -62,7 +62,7 @@
             data-tooltip="Choose between the PMV and Adaptive model."
           >
             <select class="form-control input-medium" id="model-type">
-              <option value="pmvElevatedAirspeed">PMV method</option>
+              <option value="pmvElevatedAirspeed">PMV(予測平均温冷感申告)</option>
               <option value="adaptiveComfort">Adaptive method</option>
             </select>
           </div>
@@ -125,7 +125,7 @@
                     class="mainlink"
                     href="http://en.wikipedia.org/wiki/Thermal_comfort#Air_speed"
                     target="_new"
-                    >Air speed</a
+                    >風速</a
                   >
                 </div>
               </div>
@@ -156,7 +156,7 @@
                     class="mainlink"
                     href="http://en.wikipedia.org/wiki/Humidity"
                     id="rh-description"
-                    >Relative humidity</a
+                    >相対湿度</a
                   >
                 </div>
               </div>
@@ -185,7 +185,7 @@
                     class="mainlink"
                     href="http://en.wikipedia.org/wiki/Thermal_comfort#Metabolic_rate"
                     target="_new"
-                    >Metabolic rate</a
+                    >METs</a
                   >
                 </div>
               </div>
@@ -210,7 +210,7 @@
                     class="mainlink"
                     href="http://en.wikipedia.org/wiki/Clothing_insulation"
                     target="_new"
-                    >Clothing level</a
+                    >着衣量</a
                   >
                 </div>
               </div>
@@ -235,7 +235,7 @@
                 class="btn btn-light border"
                 data-tooltip="Calculate clothing level by specifying all garments occupants were wearing"
               >
-                <input type="checkbox" id="customClo" />Create custom ensemble
+                <input type="checkbox" id="customClo" />任意の組み合わせを作成
               </label>
             </div>
 
@@ -348,7 +348,7 @@
               />
               Set pressure
             </label>
-            <label class="btn btn-light border" data-tooltip="Change units">
+            <label class="btn btn-light border d-none" data-tooltip="Change units">
               <input
                 type="radio"
                 name="options"
@@ -393,7 +393,7 @@
                 name="options"
                 id="setDefaults"
                 autocomplete="off"
-              />Reset
+              />リセット
             </label>
             <label
               class="btn btn-light border"
@@ -405,7 +405,7 @@
                 id="save_state"
                 autocomplete="off"
                 checked
-              />Save
+              />保存
             </label>
             <label
               class="btn btn-light border"
@@ -417,7 +417,7 @@
                 id="reload_state"
                 autocomplete="off"
                 checked
-              />Reload
+              />再読み込み
             </label>
             <label class="btn btn-light border" data-tooltip="Share this page">
               <input
@@ -426,7 +426,7 @@
                 id="share_state"
                 autocomplete="off"
                 checked
-              />Share
+              />共有
             </label>
           </div>
         </div>
@@ -437,7 +437,7 @@
               <a
                 href="https://center-for-the-built-environment.gitbook.io/thermal-comfort-tool/documentation/ashrae-55.html"
                 target="_new"
-                >Documentation</a
+                >ドキュメント</a
               >
             </label>
           </div>
@@ -577,10 +577,10 @@
         <select class="form-control" id="chartSelect">
           <option value="psychta">Psychrometric (air temperature)</option>
           <option value="psychtop"
-            >Psychrometric (operative temperature)</option
+            >Psychrometric (作用温度)</option
           >
           <option value="temphum">Relative humidity vs. air temperature</option>
-          <option value="veltop">Air speed vs. operative temperature</option>
+          <option value="veltop">Air speed vs. 作用温度</option>
           <option value="heatloss"
             >Thermal heat losses vs. air temperature</option
           >
@@ -643,7 +643,7 @@
               temperature (MRT) is fixed, controlled by the inputbox. Each point
               on the chart has the same MRT, which defines the comfort zone
               boundary. In this way you can see how changes in MRT affect
-              thermal comfort. You can also still use the operative temperature
+              thermal comfort. You can also still use the  operative temperature
               button, yet each point will have the same MRT.
             </p>
             <p>
@@ -676,7 +676,7 @@
                 target="_new"
                 >psychrometric chart</a
               >
-              the abscissa is the operative temperature and for each point
+              the abscissa is the  operative temperature and for each point
               dry-bulb temperature equals mean radiant temperature (DBT = MRT).
               The comfort zone represents the combination of conditions with the
               same DBT and MRT for which the PMV is between -0.5 and +0.5,
@@ -727,7 +727,7 @@
           <div class="card-body p-1 m-1" id="veltop-note">
             <p>
               <strong>NOTE:</strong> This chart represents only two variables,
-              air speed against operative temperature. The operative temperature
+              air speed against  operative temperature. The  operative temperature
               for each point is determined by dry-bulb temperature equals mean
               radiant temperature (DBT = MRT). The calculation of PMV comfort
               zone is based on all the psychrometric variables, with PMV values

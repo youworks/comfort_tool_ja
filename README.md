@@ -1,9 +1,13 @@
-# CBE Thermal Comfort Tool
+# CBE 温熱快適度ツール (日本語版)
 
-A web interface for comfort model calculations and visualizations according to ASHRAE Standard-55, EN Standard 16798 and ISO Standard 7730. 
+[CBE Comfor Tool](https://github.com/CenterForTheBuiltEnvironment/comfort_tool) を フォークして表記を日本語にしています。
 
-[Live deployment of the tool](http://comfort.cbe.berkeley.edu/).
+また、最新版を https://comfort.archlab.jp/ にて公開しています。
 
-[Official documentation](https://center-for-the-built-environment.gitbook.io/thermal-comfort-tool/)
+## Run
 
-[Contribute to the project](https://center-for-the-built-environment.gitbook.io/thermal-comfort-tool/contributing/contributing)
+```
+pip3 install -r requirements.txt
+python3 comfort.py
+```
+Launch web browser at `localhost:8080`

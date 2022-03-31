@@ -35,10 +35,10 @@ let phs_chart = new (function () {
 
     if (isCelsius) {
       chartInstance.options.scales.yAxes[0].scaleLabel.labelString =
-        "Temperature [°C]";
+        "温度 [°C]";
     } else {
       chartInstance.options.scales.yAxes[0].scaleLabel.labelString =
-        "Temperature [°F]";
+        "温度 [°F]";
     }
 
     chartInstance.data.datasets[0].data = results.t_re_array;
@@ -61,7 +61,7 @@ let phs_chart = new (function () {
         labels: results.time_array,
         datasets: [
           {
-            label: "Rectal temperature",
+            label: "直腸温",
             data: results.t_re_array,
             backgroundColor: "#3BBDED",
             borderColor: "#3BBDED",
@@ -70,7 +70,7 @@ let phs_chart = new (function () {
             yAxisID: "y",
           },
           {
-            label: "Core temperature",
+            label: "深部体温",
             data: results.t_cr_array,
             backgroundColor: "#1B679B",
             borderColor: "#1B679B",
@@ -79,7 +79,7 @@ let phs_chart = new (function () {
             yAxisID: "y",
           },
           {
-            label: "Max rectal temperature",
+            label: "最大直腸温",
             data: max_rectal_temperature,
             backgroundColor: "#ed3b3b",
             borderColor: "#ed3b3b",
@@ -104,7 +104,7 @@ let phs_chart = new (function () {
               position: "left",
               scaleLabel: {
                 display: true,
-                labelString: "Temperature [°C]",
+                labelString: "温度 [°C]",
               },
               // stacked: true,
               gridLines: {
@@ -120,7 +120,7 @@ let phs_chart = new (function () {
             {
               scaleLabel: {
                 display: true,
-                labelString: "Time [minutes]",
+                labelString: "時間 [分]",
               },
               gridLines: {
                 color: "rgba(0, 0, 0, 0)",

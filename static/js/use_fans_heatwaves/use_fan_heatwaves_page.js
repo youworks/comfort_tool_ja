@@ -128,7 +128,7 @@ $("#setDynamicClo").click(function () {
 function update() {
   // get user input and validate that complies with standard applicability limits
   const message =
-    "The value you entered is outside the tool's applicability limits. Air speed is " +
+    "入力された値はツールの想定範囲外です. 風速は is " +
     "limited between " +
     envVarLimits.vel.si.min +
     " and " +

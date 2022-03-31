@@ -1,5 +1,5 @@
 {% extends "index.html" %} {% block head %} {{ super() }}
-<title>CBE Thermal Comfort Tool Use Fans Heatwave</title>
+<title>CBE 温熱快適度ツール Use Fans Heatwave</title>
 <link
   rel="stylesheet"
   type="text/css"
@@ -38,7 +38,7 @@
   <div class="row justify-content-center">
     <div class="card col-md-12 col-lg-5 my-2 p-0">
       <div class="card-header">
-        Inputs
+        入力
       </div>
       <div id="left_content" class="card-body">
         {# Inputs PMV and adaptive #}
@@ -48,13 +48,13 @@
               <div class="col-md-4 col-lg-12 p-1">
                 <div
                   data-toggle="tooltip"
-                  title="Average air speed. The tool automatically calculates the relative air speed."
+                  title="平均風速. ツールは自動的に相対風速を計算します."
                 >
                   <a
                     class="mainlink"
                     href="http://en.wikipedia.org/wiki/Thermal_comfort#Air_speed"
                     target="_new"
-                    >Air speed</a
+                    >風速</a
                   >
                 </div>
               </div>
@@ -74,7 +74,7 @@
                     class="mainlink"
                     href="http://en.wikipedia.org/wiki/Thermal_comfort#Metabolic_rate"
                     target="_new"
-                    >Metabolic rate</a
+                    >代謝当量(METs)</a
                   >
                 </div>
               </div>
@@ -94,13 +94,13 @@
               <div class="col-md-4 col-lg-12 p-1">
                 <div
                   data-toggle="tooltip"
-                  title="Total clothing level. The tool automatically calculates dynamic clothing value."
+                  title="着衣量. ツールは自動的に動的な衣服の値を計算します。"
                 >
                   <a
                     class="mainlink"
-                    href="http://en.wikipedia.org/wiki/Clothing_insulation"
+                    href="https://ja.wikipedia.org/wiki/%E7%9D%80%E8%A1%A3%E9%87%8F"
                     target="_new"
-                    >Clothing level</a
+                    >着衣量(Clo値)</a
                   >
                 </div>
               </div>
@@ -120,10 +120,10 @@
               class="row justify-content-center mt-4 btn-group-toggle"
               data-toggle="buttons"
               data-toggle="tooltip"
-              title="Calculate clothing level by specifying all garments occupants were wearing"
+              title="居住者が着用していたすべての衣服を特定し、衣服レベルを算出する。"
             >
               <label for="customClo" class="btn btn-light border">
-                <input type="checkbox" id="customClo" />Create custom ensemble
+                <input type="checkbox" id="customClo" />任意の組み合わせを作成
               </label>
             </div>
 
@@ -139,7 +139,7 @@
                 class="col-sm-12 multiselect"
                 multiple="multiple"
               ></select>
-              <button id="setClo" class="col-sm-12">Set clo value</button>
+              <button id="setClo" class="col-sm-12">Clo値を設定</button>
             </div>
 
             {# dynamic prediction of clothing interface #}
@@ -160,12 +160,12 @@
         </div>
 
         {# set of buttons at the bottom #}
-        <div class="row justify-content-center mt-2">
+        <div class="row justify-content-center mt-2 d-none">
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label
               class="btn btn-light border"
               data-toggle="tooltip"
-              title="Change units"
+              title="単位変更"
             >
               <input
                 type="radio"
@@ -173,7 +173,7 @@
                 id="unitsToggle"
                 autocomplete="off"
               />
-              SI/IP
+              国際単位系(SI)/帝国単位(IP)
             </label>
           </div>
         </div>
@@ -182,19 +182,19 @@
             <label
               class="btn btn-light border"
               data-toggle="tooltip"
-              title="Reset inputs to default value"
+              title="入力を初期値にリセットします"
             >
               <input
                 type="radio"
                 name="options"
                 id="setDefaults"
                 autocomplete="off"
-              />Reset
+              />リセット
             </label>
             <label
               class="btn btn-light border"
               data-toggle="tooltip"
-              title="Save the current inputs"
+              title="現在の入力を保存"
             >
               <input
                 type="radio"
@@ -202,12 +202,12 @@
                 id="save_state"
                 autocomplete="off"
                 checked
-              />Save
+              />保存
             </label>
             <label
               class="btn btn-light border"
               data-toggle="tooltip"
-              title="Reload the saved inputs"
+              title="保存された入力を再読み込み"
             >
               <input
                 type="radio"
@@ -215,12 +215,12 @@
                 id="reload_state"
                 autocomplete="off"
                 checked
-              />Reload
+              />再読み込み
             </label>
             <label
               class="btn btn-light border"
               data-toggle="tooltip"
-              title="Share this page"
+              title="このページを共有"
             >
               <input
                 type="radio"
@@ -228,7 +228,7 @@
                 id="share_state"
                 autocomplete="off"
                 checked
-              />Share
+              />共有
             </label>
           </div>
         </div>
@@ -239,7 +239,7 @@
               <a
                 href="https://center-for-the-built-environment.gitbook.io/thermal-comfort-tool/documentation/fans-heatwaves"
                 target="_new"
-                >Documentation</a
+                >ドキュメント</a
               >
             </label>
           </div>
@@ -274,25 +274,24 @@
       <div class="row justify-content-center note-chart">
         <div class="card-body px-5 py-3" id="use_fans_heatwave_note">
           <p>
-            <strong>NOTE:</strong> The green areas show the temperature and
-            relative humidity conditions in which the use of fans is beneficial
-            since they provide additional cooling to people. In the dark green
-            region, while the use of fans is still beneficial, people are most
-            likely suffering from heat strain. The red area demarcates the
-            region in which fans should not be used.
+            <strong>説明:</strong> 緑色の領域は、扇風機の使用が有効な温度と相対湿度の条件を示しており、
+            扇風機を使うと涼しく感じます。濃い緑色の部分は、扇風機の使用はまだ有効ですが、
+            熱中症になる可能性が高いです。赤い部分は、扇風機の使用を控えた方が良い領域です。
           </p>
           <p>
             These results were calculated using the Gagge et al. (1971) heat
-            balance model with modifications as described in the paper. We
-            assumed that
-            <a href="https://en.wikipedia.org/wiki/Dry-bulb_temperature"
-              >dry-bulb air temperature</a
+            balance model with modifications as described in the paper.
+            <a href="https://ja.wikipedia.org/wiki/%E4%B9%BE%E7%90%83%E6%B8%A9%E5%BA%A6"
+              >乾球温度</a
             >
-            is equal to the
+            は
             <a href="https://en.wikipedia.org/wiki/Mean_radiant_temperature"
-              >mean radiant temperature</a
-            >. Results are applicable to healthy adults. Our tool does not
-            provide medical advice.
+              >平均放射温度(MRT)</a
+            >
+            と等しいと仮定した。
+            
+            結果は健康な成人に適用されます。
+            ツールは医学的なアドバイスを提供するものではありません。
           </p>
         </div>
       </div>

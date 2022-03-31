@@ -33,40 +33,40 @@ let keys = ["ta", "tr", "vel", "rh", "met", "clo", "trm", "vel_a"];
 // Clothes ensembles that are shown in the drop down menu. The values are sorted by clo in ascending order
 let cloInsulationTypicalEnsembles = [
   {
-    clothing: "Walking shorts, short-sleeve shirt: 0.36 clo",
+    clothing: "ウォーキングパンツ, 半袖シャツ: 0.36 clo",
     clo: 0.36,
   },
   {
-    clothing: "Typical summer indoor clothing: 0.5 clo",
+    clothing: "夏の代表的な室内着: 0.5 clo",
     clo: 0.5,
   },
   {
     clothing:
-      "Knee-length skirt, short-sleeve shirt, sandals, underwear: 0.54 clo",
+      "膝丈スカート、半袖シャツ、サンダル、下着: 0.54 clo",
     clo: 0.54,
   },
   {
-    clothing: "Trousers, short-sleeve shirt, socks, shoes, underwear: 0.57 clo",
+    clothing: "ズボン、半袖シャツ、靴下、靴、下着: 0.57 clo",
     clo: 0.57,
   },
   {
-    clothing: "Trousers, long-sleeve shirt: 0.61 clo",
+    clothing: "ズボン、長袖シャツ: 0.61 clo",
     clo: 0.61,
   },
   {
-    clothing: "Knee-length skirt, long-sleeve shirt, full slip: 0.67 clo",
+    clothing: "膝丈スカート、長袖シャツ、フルスリップ: 0.67 clo",
     clo: 0.67,
   },
   {
-    clothing: "Sweat pants, long-sleeve sweatshirt: 0.74 clo",
+    clothing: "スウェットパンツ、長袖スウェットシャツ: 0.74 clo",
     clo: 0.74,
   },
   {
-    clothing: "Jacket, Trousers, long-sleeve shirt: 0.96 clo",
+    clothing: "ジャケット、ズボン、長袖シャツ: 0.96 clo",
     clo: 0.96,
   },
   {
-    clothing: "Typical winter indoor clothing: 1.0 clo",
+    clothing: "冬の代表的な室内着: 1.0 clo",
     clo: 1.0,
   },
 ];
@@ -310,35 +310,35 @@ let cloInsulationGarments = [
 // Metabolic rates of typical activities
 let metRatesTypicalTasks = [
   {
-    activity: "Sleeping: 0.7",
+    activity: "睡眠: 0.7",
     met: 0.7,
   },
   {
-    activity: "Reclining: 0.8",
+    activity: "リクライニング: 0.8",
     met: 0.8,
   },
   {
-    activity: "Seated, quiet: 1.0",
+    activity: "着座, 静か: 1.0",
     met: 1.0,
   },
   {
-    activity: "Reading, seated: 1.0",
+    activity: "読書, 着座: 1.0",
     met: 1.0,
   },
   {
-    activity: "Writing: 1.0",
+    activity: "書き物: 1.0",
     met: 1.0,
   },
   {
-    activity: "Typing: 1.1",
+    activity: "タイピング: 1.1",
     met: 1.1,
   },
   {
-    activity: "Standing, relaxed: 1.2",
+    activity: "立位, リラックス: 1.2",
     met: 1.2,
   },
   {
-    activity: "Filing, seated: 1.2",
+    activity: "ファイリング, 着座: 1.2",
     met: 1.2,
   },
   {

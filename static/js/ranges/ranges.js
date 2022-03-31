@@ -117,8 +117,8 @@ $(document).ready(function () {
 
   parameter_selection_change();
 
-  $("#db-axis-C-label").text("Operative Temperature [°C]");
-  $("#db-axis-F-label").text("Operative Temperature [°F]");
+  $("#db-axis-C-label").text("作用温度 [°C]");
+  $("#db-axis-F-label").text("作用温度 [°F]");
 });
 
 $(function () {
